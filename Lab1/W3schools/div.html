@@ -1,0 +1,33 @@
+<!--The <div> Element
+The <div> element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.-->
+    Lorem Ipsum <div>I am a div</div> dolor sit amet.
+<!--Center align a <div> element
+If you have a <div> element that is not 100% wide, and you want to center-align it, set the CSS margin property to auto.-->
+    <style>
+        div {
+          width:300px;
+          margin:auto;
+        }
+        </style>
+
+
+<!--Float
+The CSS float property was not originally meant to align <div> elements side-by-side, but has been used for this purpose for many years.
+
+The CSS float property is used for positioning and formatting content and allows elements to be positioned horizontally, rather than vertically.
+
+-->
+
+<!--Flex
+The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.
+
+To make the CSS flex method work, surround the <div> elements with another <div> element and give it the status as a flex container.-->
+
+    <style>
+        .mycontainer {
+          display: flex;
+        }
+        .mycontainer > div {
+          width:33%;
+        }
+        </style>
