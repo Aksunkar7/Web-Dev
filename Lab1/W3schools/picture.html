@@ -1,0 +1,10 @@
+<!--The HTML <picture> element allows you to display different pictures for different 
+devices or screen sizes.-->
+
+Show different images for different screen sizes:
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg"> <!--In case of cources are invalid-->
+</picture>
