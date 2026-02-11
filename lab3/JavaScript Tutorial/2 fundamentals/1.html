@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Before the script...</p>
+
+  <script>
+    alert( 'Hello, world!' );
+  </script>
+
+  <p>...After the script.</p>
+
+</body>
+
+</html>
+
+
+<!--External scripts-->
+<script src="/path/to/script.js"></script>
+{% comment %} To attach several scripts, use multiple tags: {% endcomment %}
+
+<script src="/js/script1.js"></script>
+<script src="/js/script2.js"></script>
+
+<script src="file.js">
+  alert(1); // the content is ignored, because src is set
+</script>
+
+{% comment %} We must choose either an external <script src="…"> or a regular <script> with code.
+
+  The example above can be split into two scripts to work:
+   {% endcomment %}
+  <script src="file.js"></script>
+  <script>
+    alert(1);
+  </script>
