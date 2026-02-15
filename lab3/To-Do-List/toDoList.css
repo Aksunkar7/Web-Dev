@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+#container{
+    font-family: arial, sans-serif;
+
+}
+
+.banner{
+    position: fixed;
+    width: 100%;
+    top:0;
+    background-color: black;
+    padding: 10px;
+}
+
+.logo{
+    color: white;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.main{
+    margin-top: 150px;
+    margin-left: 250px;
+}
+
+.todo-input{
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 7px 15px;
+    width:400px; 
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.todo-input:focus{
+    outline-color: blue;
+}
+
+#btn{
+    cursor: pointer;
+    margin-left: 20px;
+    width: 40px;
+    padding: 5px;
+    border:1px gray solid;
+    border-radius: 2px;
+    color:white;
+    background-color: rgb(57, 120, 220)
+}
+
+.todo{
+    margin-bottom: 5px;
+    padding: 5px 20px;
+    background-color: rgb(165, 165, 165);
+    border-radius: 10px;
+    display: flex;
+}
+
+.user-checkbox{
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    padding-right: 0;  
+    margin-right: 10px; 
+    flex-grow: 1;
+}
+
+.icon{
+    width:20px;
+}
+.delete-button{
+    border: none;
+    border-radius: 5px;
+    background: none;
+    padding: 6px 7px;
+    cursor: pointer;
+}
+
+
+
+
+input[type="checkbox"]:checked ~ .user-checkbox {
+    text-decoration: line-through;
+    color: rgb(204, 202, 202); /* Optional: makes the finished task look faded */
+}
+.main{
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
