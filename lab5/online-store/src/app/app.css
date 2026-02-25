@@ -1,0 +1,17 @@
+.cat-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  /* Стиль для выбранной категории */
+  .cat-btn.active {
+    background-color: #007bff; /* Синий цвет */
+    color: white;              /* Белый текст */
+    border-color: #0056b3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }

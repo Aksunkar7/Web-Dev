@@ -1,0 +1,127 @@
+.product-card {
+    display: flex;
+    flex-direction: column; /* Элементы внутри встают друг под друга */
+    height: 100%;           /* Растягиваем карточку на всю высоту ячейки сетки */
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Чтобы паддинги не раздували карточку */
+}
+
+  
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Картинка товара */
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Тексты и кнопка */
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e31235; /* Цвет Kaspi */
+    margin: 10px 0;
+  }
+  
+  .kaspi-button {
+    display: block;
+    text-align: center;
+    background-color: #0081e9;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+
+  .share {
+    margin-top: 5px;
+    height: 25px;
+    background-color: #3bbee6;
+    color: #f4f4f4;
+    border: 2px;
+    border-radius: 6px
+  }
+
+  .thumbnail-row {
+    width: 100%;
+    display: flex;
+    gap: 6px; /* Чуть меньше расстояние между ними */
+    justify-content: center;
+    margin: 8px 0;
+  }
+  
+  .thumb-item {
+    display: flex;
+    width: 33%;
+
+  }
+
+  .thumbnail {
+    width: 35px;         /* Уменьшили ширину */
+    height: 35px;        /* Уменьшили высоту */
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;        /* Неактивные картинки чуть бледнее */
+    transition: all 0.2s ease;
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+    border-color: #0081e9;
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+    /* border: 1.5px solid #0081e9; Четкая рамка для выбранной */
+    /* box-shadow: 0 0 5px rgba(0, 129, 233, 0.3); */
+  }
+
+  .like-btn {
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Эффект пульсации при нажатии */
+  .like-btn:active {
+    transform: scale(1.3);
+  }
+  
+  /* Цвет, если лайк поставлен */
+  .like-btn.liked {
+    color: #ff4757; /* Ярко-красный */
+  }
+
+  .share {
+    cursor: pointer;
+    margin-top: 5px;
+    height: 25px;
+    background-color: #3bbee6;
+    color: #f4f4f4;
+    border: 2px;
+    border-radius: 6px
+  }
+
+  .delete-btn {
+    cursor: pointer;
+    margin-top: 5px;
+    height: 25px;
+    background-color: #e31235;
+    color: #f4f4f4;
+    border: 2px;
+    border-radius: 6px
+  }

@@ -1,0 +1,38 @@
+<div class="product-card">
+    <div class="likes-section">
+        <button 
+        class="like-btn" 
+        [class.liked]="isLiked" 
+        (click)="increaseLike()">
+        ❤️ {{ product.likes }}
+      </button>
+    </div>
+
+    <div class="main-image-container">
+        <img [src]="product.image" [alt]="product.name" class="main-image">
+    </div>
+    <div class="thumbnail-row">
+        @for (img of product.images; track img) {
+          <div class="thumb-item">
+            <img 
+              [src]="img" 
+              (click)="changeImage(img)" 
+              [class.active]="product.image === img"
+              class="thumbnail">
+          </div>  
+        }
+      </div>
+
+    
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <div class="price">{{ product.price }} ₸</div>
+    <div class='rating'>{{product.rating}}⭐</div>
+
+    
+    <a [href]="product.link" target="_blank" class="kaspi-button">Buy on Kaspi</a>
+    <button class='share' (click)="shareOnTelegram(product.link)">shareOnTelegram</button>
+    <button class='share' (click)="shareOnWhatsapp(product.link)">shareOnWhatsapp</button>
+    <button class="delete-btn" (click)="deleteProduct()">✖</button>
+</div>
+
