@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #6366f1; /* Приятный индиго вместо синего */
+  --danger-color: #ef4444;
+  --bg-soft: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+}
+
+.albums-container {
+  max-width: 800px; /* Немного расширили */
+  margin: 60px auto;
+  padding: 0 24px;
+  font-family: 'Inter', system-ui, sans-serif; /* Добавили современный шрифт */
+}
+
+.albums-container h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Элемент списка (Альбом) */
+.album-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* Более мягкие углы */
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.album-item:hover {
+  transform: translateY(-2px); /* Эффект приподнимания */
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+}
+
+.album-id {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-color); /* ID теперь акцентный */
+  background: #eef2ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.album-title {
+  flex: 1;
+  padding: 0 20px;
+  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Кнопка удаления */
+.btn-delete {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+  color: var(--danger-color);
+  border-color: #fca5a5;
+}
+
+/* Состояние загрузки */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  color: var(--text-muted);
+  font-weight: 500;
+  gap: 15px;
+}

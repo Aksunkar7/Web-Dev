@@ -1,0 +1,61 @@
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+}
+
+.home {
+  max-width: 520px; /* Немного увеличили для лучшей читаемости */
+  margin: 120px auto;
+  padding: 40px 32px;
+  text-align: center; /* Центрируем контент для "Hero" эффекта */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* Эффект матового стекла */
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.home h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.home p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.home a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: black;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+}
+
+.home a:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px); /* Легкий подъем */
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+}
+
+.home a:active {
+  transform: translateY(0);
+}
+
